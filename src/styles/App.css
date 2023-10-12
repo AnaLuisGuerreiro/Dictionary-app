@@ -2,3 +2,8 @@
   margin-top: 80px;
   text-align: center;
 }
+footer {
+  margin-top: 50px;
+  font-family: monospace;
+  font-size: 15px;
+}
