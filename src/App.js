@@ -1,7 +1,7 @@
 import book from "./img/book.png";
 
 // Components
-import Dictionary from "./components/dictionary";
+import Dictionary from "./components/Dictionary";
 
 import "./styles/App.css";
 
