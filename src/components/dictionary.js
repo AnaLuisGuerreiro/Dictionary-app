@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import book from "../img/book.png";
 
 import "../styles/dictionary.css";
 
 export default function Dictionary() {
   const [word, setWord] = useState("");
+
   function search(event) {
     event.preventDefault();
     alert(word);
@@ -16,8 +16,6 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <h1> Dictionary </h1>
-      <img src={book} alt="book" width={200} />
       <form onSubmit={search}>
         <input
           type="search"
@@ -25,7 +23,7 @@ export default function Dictionary() {
           autoFocus={true}
           onChange={handleUserWordChange}
         />
-        <input type="submit" value="Search" />
+        <input type="submit" value="🔍" />
       </form>
     </div>
   );
