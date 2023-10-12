@@ -10,8 +10,11 @@ export default function Dictionary() {
     console.log(response.data[0]);
   }
 
+  // API RESQUEST
   function search(event) {
     event.preventDefault();
+
+    // Documentation - https://www.shecodes.io/learn/apis/dictionary
     const key_api = "37ao80323cfe0b171ed40af823227b0t";
     const api_url = `https:api.shecodes.io/dictionary/v1/define?word=${word}&key=${key_api}`;
 
