@@ -1,1 +1,3 @@
-# Getting Started with Create React App
+# Dictionary App
+
+Virtual dictionary, where you can type any word and search for is meaning.
