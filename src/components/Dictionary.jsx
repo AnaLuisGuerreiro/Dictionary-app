@@ -9,10 +9,6 @@ export default function Dictionary() {
   const [word, setWord] = useState("");
   const [results, setResults] = useState(null);
 
-  function handleResponse(response) {
-    setResults(response.data);
-  }
-
   // API RESQUEST
   function search(event) {
     event.preventDefault();
@@ -21,7 +17,9 @@ export default function Dictionary() {
     const key_api = "37ao80323cfe0b171ed40af823227b0t";
     const api_url = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${key_api}`;
 
-    axios.get(api_url).then(handleResponse);
+    axios.get(api_url).then((response) => {
+      setResults(response.data);
+    });
   }
 
   function handleUserWordChange(event) {
