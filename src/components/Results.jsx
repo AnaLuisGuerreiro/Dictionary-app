@@ -5,7 +5,6 @@ import Meaning from "./Meaning";
 import "../styles/results.css";
 
 export default function Results(props) {
-  console.log(props);
   if (props.results) {
     return (
       <div className="Results">
