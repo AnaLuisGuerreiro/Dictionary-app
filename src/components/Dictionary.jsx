@@ -17,6 +17,18 @@ export default function Dictionary(props) {
     const key_api = "37ao80323cfe0b171ed40af823227b0t";
     const api_url = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${key_api}`;
 
+    const api_key_images =
+      "NXEXBClgNapTNApicDvdvhV6oUMnZtF5PTFDUJmehSWKlnC50eCYhqpg";
+    const api_url_images = `https://api.pexels.com/v1/search?query=${word}&per_page=4`;
+
+    axios
+      .get(api_url_images, {
+        headers: { Authorization: `Bearer ${api_key_images}` },
+      })
+      .then((data) => {
+        console.log(data);
+      });
+
     axios
       .get(api_url)
       .then((response) => {
