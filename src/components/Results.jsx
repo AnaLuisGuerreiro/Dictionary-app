@@ -1,7 +1,8 @@
 import React from "react";
 
+import books from "../img/books.png";
+
 import Meaning from "./Meaning";
-import Phonetic from "./Phonetic";
 
 import "../styles/results.css";
 
@@ -9,8 +10,15 @@ export default function Results(props) {
   if (props.results) {
     return (
       <div className="Results">
-        <h2>{props.results.word}</h2>
-        <Phonetic phonetic={props.results.phonetic} />
+        <div className="info-word rounded p-2 row">
+          <div className="col-10">
+            <h2>{props.results.word}</h2>
+            <p>/ {props.results.phonetic} /</p>
+          </div>
+          <div className="col-2 text-center">
+            <img src={books} alt="books" width={100} />
+          </div>
+        </div>
         <div>
           {props.results.meanings.map((meaning, index) => {
             return (
