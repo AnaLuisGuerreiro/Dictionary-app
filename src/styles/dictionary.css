@@ -1,0 +1,15 @@
+.Dictionary input {
+  padding: 2px 25px;
+  margin-left: 5px;
+  border: 2px solid var(--blue);
+  background-color: var(--bg-color);
+}
+
+.Dictionary .search {
+  background-color: var(--pink);
+  padding: 1px 10px;
+  border: 2px solid var(--blue);
+}
+.Dictionary .error-message {
+  font-size: 40px;
+}

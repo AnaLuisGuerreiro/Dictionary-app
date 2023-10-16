@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500;600;900&display=swap");
 
 body {
-  background-color: whitesmoke;
+  background-color: var(--bg-color);
   color: rgb(139, 139, 139);
   font-family: "Sansita Swashed", cursive;
   font-size: 20px;

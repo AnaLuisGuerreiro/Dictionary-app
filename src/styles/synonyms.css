@@ -1,0 +1,9 @@
+.Synonyms li {
+  font-size: 18px;
+  text-align: center;
+  color: var(--white);
+  width: 140px;
+  list-style: none;
+  background-color: var(--pink);
+  border: 2px solid var(--blue);
+}

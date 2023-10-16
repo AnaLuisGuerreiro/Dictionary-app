@@ -1,3 +1,8 @@
 .Results {
   text-align: left !important;
 }
+
+.Results .info-word {
+  border-left: 4px solid var(--pink);
+  margin-left: 3px;
+}
