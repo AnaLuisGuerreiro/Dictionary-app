@@ -8,12 +8,12 @@ import "./styles/App.css";
 function App() {
   return (
     <div className="App">
-      <div className="container">
+      <div className="my-container">
         <header>
           <h1> Dictionary </h1>
-          <img src={book} alt="book" width={200} />
+          <img src={book} alt="book" width={150} className="mb-3" />
         </header>
-        <Dictionary />
+        <Dictionary defaultKeyword="Dictionary" />
       </div>
       <footer>
         <small>Coded by Ana Guerreiro 👩🏽‍💻</small>
