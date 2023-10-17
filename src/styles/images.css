@@ -1,0 +1,9 @@
+.Images li {
+  list-style: none;
+}
+.Images img {
+  border: 2px solid var(--blue);
+  width: 180px;
+  height: 150px;
+  object-fit: cover;
+}

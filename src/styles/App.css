@@ -5,19 +5,3 @@
   max-width: 1000px;
   color: var(--blue);
 }
-.App h2 {
-  font-size: 40px;
-}
-.App h2,
-h4 {
-  color: var(--brown);
-}
-.App h3 {
-  color: var(--pink);
-}
-
-footer {
-  margin-top: 50px;
-  font-family: monospace;
-  font-size: 18px;
-}

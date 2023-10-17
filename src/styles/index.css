@@ -6,3 +6,19 @@ body {
   font-family: "Sansita Swashed", cursive;
   font-size: 20px;
 }
+h2 {
+  font-size: 40px;
+}
+h2,
+h4 {
+  color: var(--brown);
+}
+h3 {
+  color: var(--pink);
+}
+
+footer {
+  margin-top: 50px;
+  font-family: monospace;
+  font-size: 18px;
+}
