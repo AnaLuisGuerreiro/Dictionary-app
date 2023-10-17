@@ -2,40 +2,35 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import Results from "./Results";
-import Images from "./Images";
 
 import "../styles/dictionary.css";
 
 export default function Dictionary(props) {
   const [word, setWord] = useState(props.defaultKeyword);
   const [results, setResults] = useState(null);
-  const [images, setImages] = useState("");
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(null);
 
-  // APIs RESQUEST
-  function handleImagesApi() {
-    // Documentation - https://unsplash.com/documentation
-    const api_key_images = "75vc4Ifmeky3yEEAb_ox5nnN0_Wl2DVDenzDlm1D0-g";
-    const api_url_images = `https://api.unsplash.com/search/photos/?client_id=${api_key_images}&query=${word}&per_page=8`;
-
-    axios
-      .get(api_url_images)
-      .then((response) => {
-        setImages(response.data.results);
-      })
-      .catch((error) => {
-        setImages(null);
-      });
-  }
-
-  function handleDictionaryApi() {
+  // API RESQUEST
+  function search() {
     // Documentation - https://www.shecodes.io/learn/apis/dictionary
-    const key_api_dictionary = "37ao80323cfe0b171ed40af823227b0t";
-    const api_url_dictionary = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${key_api_dictionary}`;
+    const key_api = "37ao80323cfe0b171ed40af823227b0t";
+    const api_url = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${key_api}`;
+
+    const api_key_images =
+      "NXEXBClgNapTNApicDvdvhV6oUMnZtF5PTFDUJmehSWKlnC50eCYhqpg";
+    const api_url_images = `https://api.pexels.com/v1/search?query=${word}&per_page=4`;
 
     axios
-      .get(api_url_dictionary)
+      .get(api_url_images, {
+        headers: { Authorization: `Bearer ${api_key_images}` },
+      })
+      .then((data) => {
+        console.log(data);
+      });
+
+    axios
+      .get(api_url)
       .then((response) => {
         if (response.data.word) {
           setResults(response.data);
@@ -50,21 +45,16 @@ export default function Dictionary(props) {
         setResults(null);
       });
   }
-
   function handleSubmit(event) {
     event.preventDefault();
-    handleDictionaryApi();
-    handleImagesApi();
+    search();
   }
-
   function handleUserWordChange(event) {
     setWord(event.target.value);
   }
-
   function load() {
     setLoaded(true);
-    handleDictionaryApi();
-    handleImagesApi();
+    search();
   }
 
   if (loaded) {
@@ -82,7 +72,6 @@ export default function Dictionary(props) {
         </form>
         {error ? <div className="error-message">{error}</div> : null}
         <Results results={results} />
-        <Images images={images} />
       </div>
     );
   } else {
