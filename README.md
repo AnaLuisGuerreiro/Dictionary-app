@@ -14,11 +14,12 @@ Virtual dictionary, where you can type any word and search for is meanings.
 
 ## How to use
 1. **Clone the Repository:**
-`
-git clone https://github.com/AnaLuisGuerreiro/dictionary-app.git
-` 
 
-2. **Run the application:**
+```
+git clone https://github.com/AnaLuisGuerreiro/dictionary-app.git
+```
+
+3. **Run the application:**
 - Open ´App.jsx´ in your web browser.
 
 3.**Using Dictionary:**
