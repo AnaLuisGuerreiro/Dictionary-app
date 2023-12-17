@@ -32,4 +32,7 @@ Contributions are welcome! Feel free to fork this repository and submit pull req
 
 ## Acknowledgments
 Thanks to SheCodes Dictionary Api for providing the dictionary data.
+
 Thanks to Unsplash Api for all the images requests.
+
+[Site](https://dictionary-projectt.netlify.app/)
