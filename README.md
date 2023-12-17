@@ -35,4 +35,4 @@ Thanks to SheCodes Dictionary Api for providing the dictionary data.
 
 Thanks to Unsplash Api for all the images requests.
 
-[Site](https://dictionary-projectt.netlify.app/)
+[Dictionary App](https://dictionary-projectt.netlify.app/)
