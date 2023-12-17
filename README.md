@@ -20,7 +20,10 @@ git clone https://github.com/AnaLuisGuerreiro/dictionary-app.git
 ```
 
 2. **Run the application:**
-- Open ´App.jsx´ in your web browser.
+
+```
+npm start
+```
 
 3. **Using Dictionary:**
 - Enter a word in the search bar.
