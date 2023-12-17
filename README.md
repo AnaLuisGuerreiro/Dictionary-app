@@ -19,10 +19,10 @@ Virtual dictionary, where you can type any word and search for is meanings.
 git clone https://github.com/AnaLuisGuerreiro/dictionary-app.git
 ```
 
-3. **Run the application:**
+2. **Run the application:**
 - Open ´App.jsx´ in your web browser.
 
-3.**Using Dictionary:**
+3. **Using Dictionary:**
 - Enter a word in the search bar.
 - Click the search button to find the meaning.
 - Scroll down to view definitions and related images.
